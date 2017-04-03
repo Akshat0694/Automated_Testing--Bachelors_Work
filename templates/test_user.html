@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block head %}
+<title> {{ title }} - Automated testing</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <div class="row">
+
+        <div class="col-md-4 coll-lg-4">
+            {% for x in range %}
+                <form action="/success" method="post">
+                        Answer to question {{ x }} {{ form.as_table }}
+                        <input type="submit" name="submit" value="Submit"/>
+                        <br>
+                </form>
+            {% endfor %}
+        </div>
+
+        <div class="col-md-8 coll-lg-8">
+                <img src="/Question_paper_2017-03-13_22:06:57.864072/Capture.PNG"/>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}{% endblock %}
